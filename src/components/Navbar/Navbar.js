@@ -27,6 +27,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <span className="navbar-text">
+
                         Login
                     </span>
                 </div>
