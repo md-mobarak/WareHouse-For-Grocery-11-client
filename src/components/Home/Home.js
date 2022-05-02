@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AboutUs from '../AboutUs/AboutUs';
 import AskQuestion from '../AskQuestion/AskQuestion';
 import Bannar from '../Bannar/Bannar';
+import Footer from '../Footer/Footer';
 import InventoryItems from '../InventoryItems/InventoryItems';
 
 const Home = () => {
@@ -34,6 +35,9 @@ const Home = () => {
                     <h1 className='text-center my-5'>frequently Asked Questions</h1>
                     <AskQuestion></AskQuestion>
                 </div>
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import './AskQuestion.css'
 const AskQuestion = () => {
     return (
         <div className='row'>
-            <div className='col-sm-12 col-md-6'>
+            <div className='col-sm-12 col-md-6 shadow-lg p-3 mb-5 bg-body rounded'>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -34,7 +34,7 @@ const AskQuestion = () => {
                 </Accordion>
             </div>
 
-            <div className='col-sm-12 col-md-6'>
+            <div className='col-sm-12 col-md-6 shadow-lg p-3 mb-5 bg-body rounded'>
                 <form action="">
                     <h4>Ask us a question</h4>
                     <div className='d-flex'>
@@ -42,8 +42,8 @@ const AskQuestion = () => {
                         <input className='w-100' type="email" name="email" placeholder='Enter Email*' id="" />
                     </div><br />
                     <input type="text" name="" id="" placeholder='Subject' className='w-100' /><br /> <br />
-                    <textarea placeholder='Your Message' name="" id="" cols="56" rows="5"></textarea> <br />
-                    <input className='submit-btn w-25' type="submit" value="Send Message" />
+                    <textarea placeholder='Your Message' name="" id="" cols="43" rows="5"></textarea> <br />
+                    <input className='submit-btn' type="button" value="Send Message" />
                 </form>
             </div>
         </div>
