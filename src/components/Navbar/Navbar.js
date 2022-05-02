@@ -28,7 +28,9 @@ const Navbar = () => {
                     </ul>
                     <span className="navbar-text">
 
-                        Login
+
+                        <Link className="nav-link" to="/login">Login</Link>
+
                     </span>
                 </div>
             </div>

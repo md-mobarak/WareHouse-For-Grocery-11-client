@@ -16,7 +16,7 @@ const Home = () => {
     }, [])
     return (
         <div style={{ backgroundColor: "#EFF7FA" }}>
-            <h1>this home</h1>
+            {/* <h1>this home</h1> */}
             <Bannar></Bannar>
             <h1 className='my-5 text-center'>Inventory Items</h1>
             <div className='container'>

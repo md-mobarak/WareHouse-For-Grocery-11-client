@@ -7,9 +7,9 @@ const InventoryItems = ({ item }) => {
 
     return (
         <div className=''>
-            <div className="col shadow p-3 mb-5 bg-body rounded">
+            <div className="col shadow-lg p-3 mb-5 bg-body rounded-3">
                 <div className="card">
-                    <img src={img} className="card-img-top w-50" alt="..." />
+                    <img src={img} className="card-img-top w-50 d-flex mx-auto" alt="..." />
                     <div classNameName="card-body">
                         <h5 className="card-title ps-3 my-0">{name}</h5>
                         <h3 className="card-title ps-3 my-0">{quantity}</h3>
@@ -17,7 +17,7 @@ const InventoryItems = ({ item }) => {
                         <h4 className="card-title ps-3 mt-0">{price}</h4>
                         <p className="card-text ps-3 pb-3">{descriptions}</p>
                     </div>
-                    <button className='btn update-btn'>Update</button>
+                    <button className='btn update-btn  text-white'>Update</button>
                 </div>
             </div>
         </div>
