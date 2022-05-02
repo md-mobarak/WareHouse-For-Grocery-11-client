@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import AboutUs from '../AboutUs/AboutUs';
+import AskQuestion from '../AskQuestion/AskQuestion';
 import Bannar from '../Bannar/Bannar';
 import InventoryItems from '../InventoryItems/InventoryItems';
 
@@ -23,6 +25,14 @@ const Home = () => {
                 <div className='row row-cols-1 row-cols-md-3 g-4'>
                     {itemsSlice.map(item => <InventoryItems key={item._id} item={item}>
                     </InventoryItems>)}
+                </div>
+                <div className='container'>
+                    <h1 className='text-center text-primary fw-bold'>About Us</h1>
+                    <AboutUs></AboutUs>
+                </div>
+                <div className='container my-5'>
+                    <h1 className='text-center my-5'>frequently Asked Questions</h1>
+                    <AskQuestion></AskQuestion>
                 </div>
             </div>
         </div>

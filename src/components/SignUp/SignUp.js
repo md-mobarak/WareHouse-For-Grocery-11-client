@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 const SignUp = () => {
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [
@@ -13,14 +14,20 @@ const SignUp = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     const handleEmailAndPassword = () => {
-        createUserWithEmailAndPassword(email, password,)
+        createUserWithEmailAndPassword(email, password)
         console.log(email, password);
 
+    }
+    if (user || googleUser) {
+        navigate('/')
+    }
+    if (loading || googleLoading) {
+        return <p>Loading...</p>
     }
 
     const handleGoogleSignIn = () => {
@@ -30,7 +37,7 @@ const SignUp = () => {
         e.preventDefault()
     }
 
-    const navigate = useNavigate()
+
     const googleImg = "https://cdn-icons-png.flaticon.com/512/270/270014.png"
     return (
         <div className=' mx-auto w-50 mt-5'>
@@ -63,6 +70,8 @@ const SignUp = () => {
                     <img src={googleImg} width="25px" alt="" /> Google Sign in
                 </Button><br />
             </Form>
+            <p className='text-danger'>{error ? error.message : ''}</p>
+            <p className='text-danger'>{googleError ? googleError.message : ''}</p>
         </div>
     );
 };
