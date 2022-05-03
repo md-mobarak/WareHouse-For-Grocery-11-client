@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -9,7 +8,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/7-1-170x185.jpg"
     },
     {
-        "_id": 2,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -18,7 +16,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/8-1-170x185.jpg"
     },
     {
-        "_id": 3,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -27,7 +24,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/9-1-170x185.jpg"
     },
     {
-        "_id": 4,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -36,7 +32,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/10-1-170x185.jpg"
     },
     {
-        "_id": 5,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -45,7 +40,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/11-1-170x185.jpg"
     },
     {
-        "_id": 6,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -54,7 +48,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/12-1-170x185.jpg"
     },
     {
-        "_id": 7,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -63,7 +56,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/7-1-170x185.jpg"
     },
     {
-        "_id": 8,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -72,7 +64,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/7-1-170x185.jpg"
     },
     {
-        "_id": 9,
         "quantity": 10,
         "price": "$220",
         "name": "alo",
@@ -81,7 +72,6 @@
         "img": "https://klbtheme.com/groci/wp-content/uploads/2018/08/7-1-170x185.jpg"
     },
     {
-        "_id": 10,
         "quantity": 10,
         "price": "$220",
         "name": "alo",

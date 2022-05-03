@@ -10,7 +10,7 @@ const Home = () => {
     const itemsSlice = items.slice(0, 6)
 
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => {
                 setItems(data)
@@ -32,7 +32,7 @@ const Home = () => {
                     <AboutUs></AboutUs>
                 </div>
                 <div className='container my-5'>
-                    <h1 className='text-center my-5'>frequently Asked Questions</h1>
+                    <h1 className='text-center my-5'>Frequently Asked Questions</h1>
                     <AskQuestion></AskQuestion>
                 </div>
             </div>

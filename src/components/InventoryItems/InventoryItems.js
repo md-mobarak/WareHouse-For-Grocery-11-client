@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import './InventoryItems.css'
 
 const InventoryItems = ({ item }) => {
-    const { name, descriptions, img, quantity, price, supplierName
+    const navigate = useNavigate()
+
+    const { _id, name, descriptions, img, quantity, price, supplierName
     } = item
+
 
     return (
         <div className=''>
@@ -17,10 +21,10 @@ const InventoryItems = ({ item }) => {
                         <h4 className="card-title ps-3 mt-0">{price}</h4>
                         <p className="card-text ps-3 pb-3">{descriptions}</p>
                     </div>
-                    <button className='btn update-btn  text-white'>Update</button>
+                    <button onClick={() => navigate(`/update/${_id}`)} className='btn update-btn text-white'>Update</button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
