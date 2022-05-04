@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AboutUs from '../AboutUs/AboutUs';
 import AskQuestion from '../AskQuestion/AskQuestion';
 import Bannar from '../Bannar/Bannar';
 import Footer from '../Footer/Footer';
 import InventoryItems from '../InventoryItems/InventoryItems';
+import './Home.css'
 
 const Home = () => {
     const [items, setItems] = useState([]);
     const itemsSlice = items.slice(0, 6)
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch('http://localhost:5000/product')
@@ -26,6 +29,9 @@ const Home = () => {
                 <div className='row row-cols-1 row-cols-md-3 g-4'>
                     {itemsSlice.map(item => <InventoryItems key={item._id} item={item}>
                     </InventoryItems>)}
+                </div>
+                <div className='d-flex justify-content-center mt-3 mb-5 '>
+                    <button onClick={() => navigate('/all-product')} className=' text-white fs-5 fw-bold w-50 py-4 rounded-3 border-0 all-product'>Manage All Products</button>
                 </div>
                 <div className='container'>
                     <h1 className='text-center text-primary fw-bold'>About Us</h1>
