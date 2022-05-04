@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,6 +10,7 @@ import './Login.css'
 import { async } from '@firebase/util';
 
 const Login = () => {
+    let location = useLocation();
     const googleImg = "https://cdn-icons-png.flaticon.com/512/270/270014.png"
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
@@ -34,9 +35,10 @@ const Login = () => {
     if (resetError) {
         return <p>{resetError.message}</p>
     }
-
+    let from = location.state?.from?.pathname || "/";
     if (user || googleUser) {
-        return navigate('/')
+        return navigate(from, { replace: true });
+
 
     }
     if (googleLoading || loading) {
