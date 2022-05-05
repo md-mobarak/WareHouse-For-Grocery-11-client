@@ -18,6 +18,11 @@ const ProductDetail = () => {
 
     const { name, price, quantity, img } = productDetails
 
+    const handleDelivered = () => {
+        const XQuantity = quantity
+    }
+
+
 
     return (
         <div>
@@ -30,8 +35,9 @@ const ProductDetail = () => {
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                         </Card.Text>
+                        <h6>Price{price}</h6>
                         <p>Quantity{quantity}</p>
-                        <Button variant="success">Delivered</Button>
+                        <Button onClick={handleDelivered} variant="success">Delivered</Button>
                     </Card.Body>
                 </Card>
 

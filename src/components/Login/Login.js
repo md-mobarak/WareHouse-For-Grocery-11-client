@@ -35,14 +35,18 @@ const Login = () => {
     if (resetError) {
         return <p>{resetError.message}</p>
     }
+
+
     let from = location.state?.from?.pathname || "/";
     if (user || googleUser) {
         return navigate(from, { replace: true });
-
-
     }
-    if (googleLoading || loading) {
+
+    if (loading) {
         return <h1 className='text-success text-center'>Loading...</h1>
+    }
+    if (googleLoading) {
+        return <h1>Loading...</h1>
     }
 
     const signInEmailAndPassword = () => {

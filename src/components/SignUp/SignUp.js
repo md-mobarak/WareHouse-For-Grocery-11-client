@@ -26,8 +26,11 @@ const SignUp = () => {
     if (user || googleUser) {
         navigate('/')
     }
-    if (loading || googleLoading) {
+    if (loading) {
         return <p>Loading...</p>
+    }
+    if (googleLoading) {
+        return <p>Loading..</p>
     }
 
     const handleGoogleSignIn = () => {
