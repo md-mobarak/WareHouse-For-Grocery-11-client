@@ -28,7 +28,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             {
-                                user ? <Link className="nav-link" to="#">My Items</Link> : ''
+                                user ? <Link className="nav-link" to='/myitem'>My Items</Link> : ''
                             }
                         </li>
                         <li className="nav-item">

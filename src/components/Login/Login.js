@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import { async } from '@firebase/util';
+import axios from 'axios';
 
 const Login = () => {
     let location = useLocation();
@@ -40,7 +41,8 @@ const Login = () => {
 
 
     if (user || googleUser) {
-        return navigate(from, { replace: true });
+        // return navigate(from, { replace: true });
+
     }
 
     if (loading) {
@@ -50,8 +52,12 @@ const Login = () => {
         return <h1>Loading...</h1>
     }
 
-    const signInEmailAndPassword = () => {
-        signInWithEmailAndPassword(email, password)
+    const signInEmailAndPassword = async () => {
+        await signInWithEmailAndPassword(email, password)
+        const { data } = await axios.post('http://localhost:5000/login', { email })
+        console.log(data);
+        localStorage.setItem('accessToken', data.accessToken)
+        return navigate(from, { replace: true });
     }
 
     const handleGoogleSignIn = () => {

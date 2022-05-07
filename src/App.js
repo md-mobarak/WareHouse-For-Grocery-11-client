@@ -1,11 +1,13 @@
 
 import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import AllProduct from './components/AllProduct/AllProduct';
 import Home from './components/Home/Home';
 import InventoryItems from './components/InventoryItems/InventoryItems';
 import Login from './components/Login/Login';
 import ManageInventory from './components/ManageInventory/ManageInventory';
+import MyItem from './components/MyItem/MyItem';
 import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
 import RequierAuth from './components/RequierAuth/RequierAuth';
@@ -27,7 +29,10 @@ function App() {
           <ManageInventory></ManageInventory>
         </RequierAuth>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
+
       </Routes>
 
     </div>

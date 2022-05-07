@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const ManageInventory = () => {
@@ -14,9 +14,10 @@ const ManageInventory = () => {
         const quantity = e.target.quantity.value;
         const supplierName = e.target.supplierName.value;
         const descriptions = e.target.productDescriptions.value;
+        const email = user.email;
         const img = e.target.productImage.value;
         const newProduct = {
-
+            email,
             name,
             price,
             quantity,
@@ -43,7 +44,7 @@ const ManageInventory = () => {
     return (
         <div className='w-50 mx-auto my-5 d-flex justify-content-center'>
             <form className='border p-4 bg-info rounded-3 shadow-lg p-3 mb-5 ' onSubmit={handleSubmit}>
-                <input type="email" name="email" value={user.email} id="" readOnly disabled /> <br /> <br />
+                <input type="email" name="email" value={user?.email} id="" readOnly disabled /><br /> <br />
                 <input className='rounded-3' type="text" name="productName" id="" placeholder='product Name' /> <br /> <br />
 
                 <input className='rounded-3' type="text" name="productPrice" id="" placeholder='productPrice' /> <br /> <br />
@@ -56,7 +57,9 @@ const ManageInventory = () => {
 
                 <input className='rounded-3' type="text" name="productImage" id="" placeholder='Product Image' /> <br /> <br />
                 <button className='btn btn-dark rounded-3'>Add Product</button>
+
             </form>
+            <ToastContainer />
         </div>
     );
 };
