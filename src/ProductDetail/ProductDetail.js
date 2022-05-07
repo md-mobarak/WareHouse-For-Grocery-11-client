@@ -1,3 +1,4 @@
+import { async } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { Button, Card, FormControl, InputGroup } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -5,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const ProductDetail = () => {
     const { updateId } = useParams()
     const [productDetails, setProductDetails] = useState({});
-    const [newQuantity, setNewQuantity] = useState(0);
+    const [reload, setIsReload] = useState(true)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -14,18 +15,40 @@ const ProductDetail = () => {
             .then(data => {
                 setProductDetails(data);
             })
-    }, [])
+    }, [reload])
 
-    const { name, price, quantity, img } = productDetails
+    const { name, price, quantity, img } = productDetails;
+
 
     const handleDelivered = () => {
-        const XQuantity = quantity
+
+        const xQuantity = parseInt(quantity) - 1
+        const store = { name, price, xQuantity, img }
+        const url = `http://localhost:5000/product/${updateId}`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(store)
+        }).then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setIsReload(data)
+            })
+        return xQuantity
     }
 
+    const handleRestock = (e) => {
+        const reStock = e.target.restock.value;
+        console.log(reStock);
+
+    }
 
 
     return (
         <div>
+
             <div className='d-flex justify-content-center my-5'>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={img} />
@@ -36,7 +59,7 @@ const ProductDetail = () => {
                             the card's content.
                         </Card.Text>
                         <h6>Price{price}</h6>
-                        <p>Quantity{quantity}</p>
+                        <p>Quantity{ }</p>
                         <Button onClick={handleDelivered} variant="success">Delivered</Button>
                     </Card.Body>
                 </Card>
@@ -45,17 +68,16 @@ const ProductDetail = () => {
             <div className='w-50 mx-auto'>
                 <InputGroup className="mb-3">
                     <FormControl
+                        name='restock'
                         placeholder="Stock Product"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
                     />
-                    <InputGroup.Text className='bg-success text-white' id="basic-addon2">Restock</InputGroup.Text>
+                    <InputGroup.Text onClick={handleRestock} className='bg-success text-white' id="basic-addon2">Restock</InputGroup.Text>
                 </InputGroup>
 
             </div>
-            <div className='d-flex justify-content-center my-5'>
-                <button onClick={() => navigate('/all-product')} className='bg-success text-white fw-bold w-50 py-2 rounded-3 border-0'>Manage All Products</button>
-            </div>
+
         </div>
     );
 };

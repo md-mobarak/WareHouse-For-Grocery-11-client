@@ -1,9 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Row } from 'react-bootstrap';
+
+import { useNavigate } from 'react-router-dom';
 
 const AllProduct = () => {
     const [products, setProducts] = useState([])
+    const navigate = useNavigate()
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
@@ -32,9 +34,12 @@ const AllProduct = () => {
 
                 </div>
                 <p>Price{product.price}</p>
-                <p style={{ textAlign: 'justify' }}>Description{product.descriptions.slice(0, 100)}</p>
+                <p style={{ textAlign: 'justify' }}>Description{product.descriptions}</p>
                 <button onClick={() => handleDelete(product._id)} className='btn btn-success w-100'>Delete</button>
             </div>)}
+            <div className='my-5 d-flex justify-content-center'>
+                <button className='w-50 py-2 bg-success text-white fw-bold' onClick={() => navigate('/manage-inventory')}>Add New Item</button>
+            </div>
         </div>
     );
 };

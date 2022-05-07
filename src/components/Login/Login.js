@@ -15,6 +15,7 @@ const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    let from = location.state?.from?.pathname || "/";
     const [
         signInWithEmailAndPassword,
         user,
@@ -37,7 +38,7 @@ const Login = () => {
     }
 
 
-    let from = location.state?.from?.pathname || "/";
+
     if (user || googleUser) {
         return navigate(from, { replace: true });
     }

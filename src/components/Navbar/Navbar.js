@@ -27,13 +27,20 @@ const Navbar = () => {
                             <Link className="nav-link active" aria-current="page" to="#">Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">My Items</Link>
+                            {
+                                user ? <Link className="nav-link" to="#">My Items</Link> : ''
+                            }
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Manage Items</Link>
+                            {user ?
+                                <Link className="nav-link" to='/all-product'>Manage Items</Link> : ''
+                            }
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#"> Add Items</Link>
+                            {user ?
+                                <Link className="nav-link" to='/manage-inventory'> Add Items</Link> :
+                                ''
+                            }
                         </li>
                     </ul>
                     <span className="navbar-text">
