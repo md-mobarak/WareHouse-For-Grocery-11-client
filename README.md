@@ -1,5 +1,24 @@
 # Getting Started with Create React App
-# Warehouse site Link(https://github.com/facebook/create-react-app)
+# [Warehouse site Link](https://github.com/facebook/create-react-app)
+
+# Live Site Link (https://github.com/facebook/create-react-app)
+
+## Site Features
+* WareHouse Site
+* home with Slider 
+* Update Product With increase Decrease
+* You will add a New Item 
+* You Will Delete a added Item
+
+
+
+## Technology Usages
+* Authentication use with firebase
+* React-bootstrap usages
+* React-hook for Firebase
+* Axios use for Data Load & Post
+* React-Router usages
+* Alert message by React-Toastify
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
