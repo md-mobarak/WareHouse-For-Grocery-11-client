@@ -49,7 +49,7 @@ const MyItem = () => {
 
                     </div>
                     <p>Price{product.price}</p>
-                    <p style={{ textAlign: 'justify' }}>Description{product.descriptions}</p>
+                    <p style={{ textAlign: 'justify' }}>descriptions {product.descriptions.slice(0, 100)}</p>
                     <button onClick={() => handleDelete(product._id)} className='btn btn-success w-100'>Delete</button>
                 </div>)}
                 {/* <div className='my-5 d-flex justify-content-center'>

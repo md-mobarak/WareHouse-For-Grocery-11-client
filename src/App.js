@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import AllProduct from './components/AllProduct/AllProduct';
+import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
 import InventoryItems from './components/InventoryItems/InventoryItems';
 import Login from './components/Login/Login';
@@ -30,6 +31,7 @@ function App() {
         </RequierAuth>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/myitem' element={<MyItem></MyItem>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
 

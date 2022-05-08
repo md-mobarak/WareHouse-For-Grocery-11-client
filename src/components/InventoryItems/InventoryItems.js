@@ -19,7 +19,7 @@ const InventoryItems = ({ item }) => {
                         <h3 className="card-title ps-3 my-0">{quantity}</h3>
                         <h3 className="card-title ps-3 mt-0">{supplierName}</h3>
                         <h4 className="card-title ps-3 mt-0">{price}</h4>
-                        <p className="card-text ps-3 pb-3">{descriptions}</p>
+                        <p title={descriptions} className="card-text ps-3 pb-3">{descriptions.slice(0, 100) + '...'}</p>
                     </div>
                     <button onClick={() => navigate(`/update/${_id}`)} className='btn update-btn text-white'>Update</button>
                 </div>

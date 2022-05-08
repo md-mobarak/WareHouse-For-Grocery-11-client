@@ -8,15 +8,9 @@ const AskQuestion = () => {
             <div className='col-sm-12 col-md-6 shadow-lg p-3 mb-5 bg-body rounded'>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Accordion Item #1</Accordion.Header>
+                        <Accordion.Header>COVID-19 updates</Accordion.Header>
                         <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
+                            "Fresh Chef is taking the highest cleaning and safety precautions in the fight against Covid-19 for our grocery. We offer curbside takeout, allowing our guests to receive our delicious food in a contactless manner. In addition, our dining room and patio area are open for seating. Reservations are not required but recommended. Our entire staff is required to wear masks and are trained in proper sanitizing requirements. At Fresh Chef, guest safety is our number one priority."
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
