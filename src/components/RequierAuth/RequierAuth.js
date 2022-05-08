@@ -7,6 +7,9 @@ const RequierAuth = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
     let location = useLocation();
 
+    if (loading) {
+        return <h1 className='text-center mt-5'>Loading...</h1>
+    }
     if (!user) {
         // Redirect them to the /login page, but save the current location they were
         // trying to go to when they were redirected. This allows us to send them

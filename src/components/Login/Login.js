@@ -41,15 +41,20 @@ const Login = () => {
 
 
     if (user || googleUser) {
-        // return navigate(from, { replace: true });
+        return navigate(from, { replace: true });
 
     }
+
 
     if (loading) {
-        return <h1 className='text-success text-center'>Loading...</h1>
+        return <div className='d-flex justify-content-center'>
+            <h1 className='text-center'>Loading...</h1>;
+        </div>
     }
     if (googleLoading) {
-        return <h1>Loading...</h1>
+        return <div className='d-flex justify-content-center'>
+            <h1 className='text-center'>Loading...</h1>;
+        </div>
     }
 
     const signInEmailAndPassword = async () => {

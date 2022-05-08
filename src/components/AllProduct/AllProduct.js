@@ -38,7 +38,7 @@ const AllProduct = () => {
                 <button onClick={() => handleDelete(product._id)} className='btn btn-success w-100'>Delete</button>
             </div>)}
             <div className='my-5 d-flex justify-content-center'>
-                <button className='w-50 py-2 bg-success text-white fw-bold' onClick={() => navigate('/manage-inventory')}>Add New Item</button>
+                <button className='w-50 py-2 bg-success text-white fw-bold border-0' onClick={() => navigate('/manage-inventory')}>Add New Item</button>
             </div>
         </div>
     );
