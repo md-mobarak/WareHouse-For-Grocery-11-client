@@ -11,7 +11,7 @@ const ProductDetail = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${updateId}`)
+        fetch(`https://lit-garden-40377.herokuapp.com/product/${updateId}`)
             .then(res => res.json())
             .then(data => {
                 setProductDetails(data);
@@ -33,7 +33,7 @@ const ProductDetail = () => {
         //     let updateInfo = { quantity }
 
         // }
-        const url = `http://localhost:5000/product/${updateId}`
+        const url = `https://lit-garden-40377.herokuapp.com/product/${updateId}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -57,7 +57,7 @@ const ProductDetail = () => {
         console.log(quantity);
         const updateInfo = { quantity };
         console.log(updateInfo);
-        const url = `http://localhost:5000/product/${updateId}`
+        const url = `https://lit-garden-40377.herokuapp.com/product/${updateId}`
         fetch(url, {
             method: 'PUT',
             headers: {

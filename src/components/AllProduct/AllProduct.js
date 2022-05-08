@@ -7,14 +7,14 @@ const AllProduct = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://lit-garden-40377.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     const handleDelete = (id) => {
         const proceed = window.confirm("Are You Sure?")
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://lit-garden-40377.herokuapp.com/product/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -28,7 +28,7 @@ const ManageInventory = () => {
         console.log(newProduct);
         e.preventDefault()
         e.target.reset()
-        fetch('http://localhost:5000/manageproduct', {
+        fetch('https://lit-garden-40377.herokuapp.com/manageproduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

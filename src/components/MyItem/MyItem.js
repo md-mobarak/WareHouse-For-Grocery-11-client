@@ -9,7 +9,7 @@ const MyItem = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://lit-garden-40377.herokuapp.com/myitem?email=${email}`;
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer${localStorage.getItem('accessToken')}`
@@ -25,7 +25,7 @@ const MyItem = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are You Sure?")
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`
+            const url = `https://lit-garden-40377.herokuapp.com/item/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
