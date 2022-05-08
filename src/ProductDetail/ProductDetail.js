@@ -94,7 +94,7 @@ const ProductDetail = () => {
                 </Card>
 
             </div>
-            <div className='w-75 container d-flex justify-content-center'>
+            <div className='w-75 my-5 container d-flex justify-content-center'>
                 <form onSubmit={handleUpdateQuantity}>
                     <input className='rounded-3' type="text" name='stock' placeholder='Restock' />
                     <input className='bg-success rounded-3 text-white' type="submit" value="ReStock" />

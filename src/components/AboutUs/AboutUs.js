@@ -12,9 +12,9 @@ const AboutUs = () => {
                 <div>
                     <h3 className='mb-4 about-info'>Save more with GO! We give you the lowest prices on all your grocery needs.</h3><br />
                     <h4 className='mt-3'>Our Vision</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam impedit sed, voluptatibus ipsa, quia ipsam facere non nobis fuga earum minus voluptatum, blanditiis expedita recusandae amet eaque laudantium consequatur sapiente.</p>
+                    <p>Whether you're stuck at home, too busy to shop, or want to save time, it's convenient to shop online for groceries. We looked at online grocery shopping services and rated each by convenience, selection, quality, ease of use, and cost. Here are our picks for the top eight online grocery shopping sites. .</p>
                     <h4 className='mt-5'>Our Goal</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae provident corrupti voluptates quidem id nihil, totam illum iusto aut, nesciunt libero consequuntur iure cupiditate animi, praesentium commodi odit deleniti.</p>
+                    <p>FreshDirect focuses on delivering quality, fresh, organic food with a short supply chain, working directly with its local farms, dairies, fisheries, and other food partners. FreshDirect shoppers fill your online order from the company's facility, not local grocery stores, with a vast inventory of items ranging from specialty goods to supermarket staples. Shop from the FreshDirect website or the FreshDirect iOS and Android apps. .</p>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 # Getting Started with Create React App
-# [Warehouse site Link](https://github.com/facebook/create-react-app)
+# [Warehouse site Link](https://assignment-11-51c6f.web.app/)
 
-# Live Site Link (https://github.com/facebook/create-react-app)
+# Live Site Link (https://assignment-11-51c6f.web.app/)
 
 ## Site Features
 * WareHouse Site
